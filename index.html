@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div class="form">
+        <h1>Love Calculator</h1>
+        <div>
+            <input type="text" name="" id="fname" placeholder="enter name" required>
+            <span>+</span>
+            <input type="text" name="" id="lname" placeholder="enter name" required>
+            <div class="btn">
+                <button onclick="putval()">Click</button>
+            </div>
+            <div>
+                <input type="text" name="" id="set" placeholder="Love Percentage">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        let set = document.getElementById("set");
+
+        const putval = () => {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+
+            if ((fname == "")) {
+                alert("Plz enter names")
+            }
+            else if ((fname.length <= 2)) {
+                alert(" min lenght is 3")
+            }
+            else if (!isNaN(fname)) {
+                alert("Only Character Allowed")
+            }
+
+            else if ((lname == "")) {
+                alert("Plz enter names")
+            }
+            else if ((lname.length <= 2)) {
+                alert(" min lenght is 3")
+            }
+            else if (!isNaN(lname)) {
+                alert("Only Character allowed")
+            }
+
+            else {
+                let x = Math.random() * 100;
+                let z = Math.floor(x);
+                set.value = `${z} %`;
+            }
+        }
+        putval();
+
+    </script>
+</body>
+
+</html>
